@@ -12,6 +12,7 @@ name = "zero2prod"
 
 [dependencies]
 actix-web = "4"
+anyhow = "1"
 chrono = { version = "0.4.22", default-features = false, features = ["clock"]}
 config = "0.14"
 rand = { version = "0.8", features = ["std_rng"] }
@@ -20,6 +21,7 @@ secrecy = { version = "0.8", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
 serde-aux = "4"
 sqlx = { version = "0.7", default-features = false, features = ["runtime-tokio-rustls", "macros", "postgres", "uuid", "chrono", "migrate"] }
+thiserror = "1"
 tokio = { version = "1", features = ["full"] }
 tokio-macros = "2.3.0" 
 tracing = { "version" = "0.1", features = ["log"]}
