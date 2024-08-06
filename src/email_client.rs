@@ -42,8 +42,7 @@ impl EmailClient {
             html_body: html_content,
             text_body: text_content,
         };
-        let builder = self
-            .http_client
+        self.http_client
             .post(&url)
             .header(
                 "X-Postmark-Server-Token",
@@ -76,7 +75,6 @@ mod tests {
     use fake::faker::lorem::en::{Paragraph, Sentence};
     use fake::{Fake, Faker};
     use secrecy::Secret;
-    use tracing_subscriber::FmtSubscriber;
     use wiremock::matchers::any;
     use wiremock::{Mock, MockServer, ResponseTemplate};
     use wiremock::matchers::{header, header_exists, path, method};
