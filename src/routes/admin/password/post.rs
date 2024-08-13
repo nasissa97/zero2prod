@@ -1,6 +1,6 @@
 use crate::authentication::{validate_credentials, AuthError, Credentials, UserId};
 use crate::session_state::TypedSession;
-use crate::routes::admin::get_username;
+use crate::routes::admin::dashboard::get_username;
 use crate::utils::{e500, see_other};
 use actix_web::{HttpResponse, web};
 use actix_web::error::InternalError;
